@@ -1,0 +1,31 @@
+:root{
+  --bg:#0f1013; --card:#17171a; --muted:#999ab0; --accent:#48aaff;
+  --round:14px;
+}
+*{box-sizing:border-box;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;}
+body{margin:0;background:linear-gradient(180deg,#0d0d10, #0b0b0d);color:#eef0f5;height:100vh;}
+#app{display:flex;height:100vh;gap:24px;padding:24px;}
+.sidebar{width:220px;background:#111217;border-radius:var(--round);padding:18px;display:flex;flex-direction:column;gap:14px;}
+.logo{width:56px;height:56px;background:linear-gradient(135deg,#3ea7ff,#6f4cff);border-radius:12px;display:flex;align-items:center;justify-content:center;font-weight:700;color:white;}
+.sidebar h2{margin:0;color:#e9edf6;font-size:14px;}
+.sidebar nav{display:flex;flex-direction:column;gap:10px;margin-top:8px;}
+.item{background:#15151a;border:none;color:#cfd3df;padding:12px;border-radius:12px;text-align:left;font-size:14px;cursor:pointer;}
+.item.active{background:linear-gradient(180deg,#25232b,#16161a);box-shadow:0 4px 18px rgba(72,170,255,0.07);}
+
+.main{flex:1;display:flex;flex-direction:column;gap:12px;}
+.topbar{height:72px;background:rgba(255,255,255,0.02);display:flex;align-items:center;justify-content:space-between;padding:12px 18px;border-radius:12px;}
+.topbar .left{display:flex;align-items:center;gap:12px;}
+.topbar img{width:40px;height:40px;border-radius:8px;}
+.topbar h1{margin:0;font-size:16px;color:#f3f5f9;}
+.search{width:320px;padding:10px;border-radius:12px;border:none;background:#101012;color:#dfe6f6;}
+
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:18px;overflow:auto;padding:12px 0 24px 0;height:calc(100% - 150px);}
+.card{background:var(--card);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:10px;}
+.card .img{height:84px;border-radius:10px;background:linear-gradient(180deg,#24242a,#1a1a1d);}
+.card h3{margin:0;color:#f6f7fb;font-size:14px;}
+.card p{margin:0;color:var(--muted);font-size:13px;line-height:1.2;}
+.actions{display:flex;gap:10px;margin-top:auto;}
+.btn{padding:10px 14px;border-radius:10px;border:none;background:linear-gradient(180deg,#4b2f8a,#4b2f8a);color:white;cursor:pointer;}
+.copy{width:42px;height:42px;border-radius:8px;background:#101114;border:1px solid rgba(255,255,255,0.02);}
+
+.status{height:36px;display:flex;align-items:center;padding:8px 12px;opacity:0.9;color:var(--muted);}
