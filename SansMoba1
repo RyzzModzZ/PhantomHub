@@ -16,7 +16,7 @@ local net = ReplicatedStorage:WaitForChild("Packages")
 local VirtualUser = game:GetService("VirtualUser")
 local rodRemote = net:WaitForChild("RF/ChargeFishingRod")
 local miniGameRemote = net:WaitForChild("RF/RequestFishingMinigameStarted")
-local finishRemote = net:WaitForChild("RE/FishingCompleted")
+local finishRemote = net:WaitForChild("RE"):WaitForChild("FishingCompleted")
 local Constants = require(ReplicatedStorage:WaitForChild("Shared", 20):WaitForChild("Constants"))
 
 _G.Characters = workspace:FindFirstChild("Characters"):WaitForChild(LocalPlayer.Name)
